@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tialwind css</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e4e4e4;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(13 148 136 / var(--tw-bg-opacity));
+  }
+
+  .tab-mobile-navbar {
+    animation-duration: 0.6s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0.5;
+      transform: translateX(-250px);
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      transform: translateX(-250px);
+    }
+  }
+</style>
+
+<body class="bg-black">
+  <!---NAVBAR START-->
+  <div
+    class="items-center fixed top-0 navbar flex md:justify-around justify-between bg-teal-600 w-full h-14 pt-3 shadow-md p-2">
+
+    <!--NAVBAR MOBILE--->
+    <div class="tab-mobile-navbar md:hidden over bg-slate-950 w-screen h-screen top-0 left-0 absolute">
+      <ul class="bg-red mt-16">
+        <li class="bg-green text-white border-b-2 p-4 border-slate-700">
+          <a href="#hero">Our Rockets</a>
+        </li>
+        <li class="bg-green text-white border-b-2 p-4 border-slate-700">
+          <a href="#rockets">Testimonials</a>
+        </li>
+        <li class="bg-green text-white border-b-2 p-4 border-slate-700">
+          <a href="#contactus">ContactUs</a>
+        </li>
+      </ul>
+    </div>
+    <!--============--->
+
+
+    <div class="flex px-2 lg:ml-10 md:ml-5">
+      <div class="brand-icon">
+        <img src="/build/imgs/rocket.png" width="50">
+      </div>
+      <h2 class="font-bold text-white ml-3 text-2xl">Acme Rockets</h2>
+    </div>
+    <div class="nav-wrapper md:block hidden">
+      <a href="#hero" class="text-white text-lg ml-6">Our Rockets</a>
+      <a href="#rockets" class="text-white text-lg ml-6">Testimonials</a>
+      <a href="#contactus" class="text-white text-lg ml-6">Contact us</a>
+    </div>
+
+    <div
+      class="md:hidden cursor-pointer toggler tab-mobile flex flex-col bg-slate-100 p-2 rounded-md float-right absolute right-2">
+      <svg height="1.3em" fill="#0d9488" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+      </svg>
+    </div>
+  </div>
+  <!---NAVBAR END-->
+
+  <!---HERO SECTION START-->
+  <div id="hero" class="flex md:flex-row flex-col-reverse md:w-4/5 w-11/12 mx-auto mt-16 p-5 cursor-pointer">
+    <div class="md:w-1/2 d-full p-4 pr-0 md:pl-8 text-center pt-12">
+      <h2 class="text-4xl text-left font-bold text-white">
+        We Boldy Go <br>
+        <span class="text-blue-300">Where No Rocket</span> <br>
+        Has Gone <br>
+        Before...
+      </h2>
+
+      <p class="text-slate-300 text-left pt-3">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, eum amet
+        <br><br> molestiae ullam eligendi vitae tempore.
+      </p>
+    </div>
+    <div class="md:w-1/2 d-full p-4 pl-0 pr-6">
+      <img src="/build/imgs/rocket-hero.png" width="400">
+    </div>
+  </div>
+  <!---HERO SECTION END-->
+
+
+  <!---ROCKETS SECTION START-->
+  <span id="rockets" class="mb-4"></span>
+  <div class="w-11/12 mx-auto mt-12 p-5">
+
+    <h2 class="text-4xl text-center font-bold text-white">OUR ROCKTES</h2>
+
+    <div class="flex mt-12 flex-wrap">
+
+      <!---CARD ITEM-->
+      <div class="md:w-1/3 w-full p-2">
+        <div
+          class="wrapper border border-gray-400 hover:border-teal-300 cursor-pointer transition-all ease-in-out duration-300 hover:scale-105 rounded-md py-3 text-center">
+          <div class="img-wrapper text-center">
+            <img class="mx-auto py-4" src="/build/imgs/rockets1.png" height="200">
+          </div>
+          <p class="text-slate-100 pl-2 py-1 text-3xl">Explore Features</p>
+          <p class="text-slate-400 pl-2 py-1 pb-2 text-teal-600 text-2xl">30$</p>
+          <button class="bg-none text-teal-600 border-2 py-1 mx-auto px-4 rounded-full mb-3 border-teal-600
+                      hover:bg-teal-600 hover:text-white ease-in-out transition-all duration-300">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!---CARD ITEM-->
+      <div class="md:w-1/3 w-full p-2">
+        <div
+          class="wrapper border border-gray-400 hover:border-teal-300 cursor-pointer transition-all ease-in-out duration-300 hover:scale-105 rounded-md py-3 text-center">
+          <div class="img-wrapper text-center">
+            <img class="mx-auto py-4" src="/build/imgs/rockets2.png" height="200">
+          </div>
+          <p class="text-slate-100 pl-2 py-1 text-3xl">Adventures</p>
+          <p class="text-slate-400 pl-2 py-1 pb-2 text-teal-600 text-2xl">30$</p>
+          <button class="bg-none text-teal-600 border-2 py-1 mx-auto px-4 rounded-full border-teal-600
+                      hover:bg-teal-600 hover:text-white ease-in-out transition-all duration-300">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!---CARD ITEM-->
+      <div class="md:w-1/3 w-full p-2">
+        <div class="wrapper border border-gray-400 rounded-md py-3 text-center">
+          <div class="img-wrapper text-center">
+            <img class="mx-auto py-4" src="/build/imgs/rockets3.png" height="200">
+          </div>
+          <p class="text-slate-100 pl-2 py-1 text-3xl">Infinity</p>
+          <p class="text-slate-400 pl-2 py-1 pb-2 text-teal-600 text-2xl">30$</p>
+          <button class="bg-none text-teal-600 border-2 py-1 mx-auto px-4 rounded-full border-teal-600
+                      hover:bg-teal-600 hover:text-white ease-in-out transition-all duration-300">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+  <!---ROCKETS SECTION END-->
+
+
+
+  <!---CONTACT SECTION END-->
+  <section class="bg-black" id="contactus">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+        Contact Us</h2>
+      <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical
+        issue?
+        Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+      <form action="#" class="space-y-8">
+        <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+            email</label>
+          <input type="email" id="email" class="shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500
+             block w-full p-2.5" placeholder="name@flowbite.com" required>
+        </div>
+        <div>
+          <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+          <input type="text" id="subject" class="shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500
+             block w-full p-2.5" placeholder="Let us know how we can help you" required>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+            Your message
+          </label>
+          <textarea id="message" rows="6" class="shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500
+             block w-full p-2.5" placeholder="Leave a comment..."></textarea>
+        </div>
+        <button type="submit"
+          class="py-3 bg-teal-600 px-5 text-sm font-medium text-center text-slate-800 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Send
+          message</button>
+      </form>
+    </div>
+  </section>
+  <!---CONTACT SECTION END-->
+
+  <br><br><br><br>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</body>
+<script>
+  $(document).ready(function () {
+    let flag = false;
+    $('.toggler').click(function () {
+      if (flag == false) {
+        flag = true;
+        $('.tab-mobile-navbar').css('animation-name', 'fadeIn');
+        $('.tab-mobile-navbar').toggleClass('hidden');
+      } else {
+        $('.tab-mobile-navbar').css('animation-name', 'fadeOut');
+        setTimeout(function () {
+          $('.tab-mobile-navbar').toggleClass('hidden');
+          flag = false;
+        }, 300)
+      }
+    });
+  });
+</script>
+
+</html>
